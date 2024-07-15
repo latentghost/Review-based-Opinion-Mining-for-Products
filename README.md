@@ -27,9 +27,15 @@ This project aims to enhance the reliability of online product reviews and provi
 
 ### Training
 - The encoder-only transformer model is trained on the Amazon Product Data dataset using a binary cross-entropy loss function and Adam optimizer. The model is trained to distinguish between real and fake reviews with high accuracy.
-- Run the [fakeReviewDetection](fakeReviewDetection-IterFinal.ipynb) notebook to train the encoder-only transformer model.
+- Run the follwing command to train the encoder-only transformer model and extract set of real reviews from the entire data:
+```
+python fakeReviewDetection.py
+```
 - The fine-tuned BART model is trained on the Amazon Product Description dataset using a sequence-to-sequence loss function and Adam optimizer. The model is trained to generate accurate and concise summaries of product reviews.
-- Run the [extractProductSummary](extractProductSummary.ipynb) notebook to generate and evaluate the summaries using the fine-tuned BART model.
+- Run the follwing command to generate and evaluate the summaries using the fine-tuned BART model:
+```
+python extractProductSummary.py
+```
 
 ### Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Please make sure to create a new branch for your changes.
